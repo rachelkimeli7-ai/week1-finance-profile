@@ -1,4 +1,3 @@
-export{}
 // week 1 challenge - finance profile page
 
 type AccountTier = "Basic" | "Standard" | "Premium"
