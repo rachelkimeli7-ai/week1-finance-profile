@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile -SwiftPesa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div class="page-wrapper">
+     <!-- sidebar navigation -->
+      <nav class="sidebar" aria-label="Main navigation">
+        <div class="brand">
+          <span class="brand-name">SwiftPesa</span>
+    </div>
+          <ul class="nav-links" role="list">
+  <li>
+    <a href="#" class="nav-link active" aria-current="page">
+      <i class="fa-solid fa-user" aria-hidden="true"></i>
+      Profile
+    </a>
+  </li>
+  <li>
+    <a href="#" class="nav-link">
+      <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+      Transactions
+    </a>
+  </li>
+        <li>
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            Analytics
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Send Money
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            Settings
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-bottom">
+        <a href="#" class="nav-link signout-link">
+          <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+          Sign out
+        </a>
+      </div>
+
+      </nav>
+
+      <!-- main content area -->
+      <main class="main-area" id="main-content">
+
+        <header class="top-header">
+          <div>
+            <h1>My Profile</h1>
+            <p class="header-sub">Account details and payment methods</p>
+          </div>
+          <button class="edit-btn" type="button">Edit Profile</button>
+        </header>
+
+        <!-- profile info card -->
+        <section class="profile-section" aria-label="User profile">
+          <div class="avatar-circle" aria-hidden="true">
+            <span>KP</span>
+          </div>
+          <div class="profile-info">
+            <div class="name-row">
+              <h2 class="user-name">Loading...</h2>
+              <span class="tier-badge">—</span>
+            </div>
+            <p class="user-phone">—</p>
+          </div>
+        </section>
+
+        <!-- balance and stats -->
+        <section class="stats-section" aria-label="Account statistics">
+          <article class="stat-box stat-box--main">
+            <p class="stat-label">Available Balance</p>
+            <p class="balance-number">—</p>
+            <p class="stat-note">Kenyan Shilling</p>
+          </article>
+          <article class="stat-box">
+            <p class="stat-label">Monthly Spend</p>
+            <p class="stat-value">KES 18,400</p>
+          </article>
+          <article class="stat-box">
+            <p class="stat-label">Money Received</p>
+            <p class="stat-value">KES 32,000</p>
+          </article>
+        </section>
+
+        <!-- payment methods list gets filled by typescript -->
+        <section class="payments-section" aria-label="Linked payment methods">
+          <header class="section-top">
+            <h2 class="section-title">Payment Methods</h2>
+            <button class="add-btn" type="button">+ Add new</button>
+          </header>
+          <ul class="payments-list" role="list"></ul>
+        </section>
+
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

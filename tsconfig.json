@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "strict": true,
+    "lib": ["ES2017", "DOM"],
+    "outDir": ".",
+    "rootDir": "src",
+    "noEmit": false
+  },
+  "files": ["src/main.ts"]
+}
