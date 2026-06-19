@@ -1,5 +1,7 @@
 "use strict";
 // week 1 challenge - finance profile page
+// types 
+// my data 
 const myUser = {
     fullName: "Kaylah Precious",
     phone: "+254 712345678",
@@ -7,6 +9,8 @@ const myUser = {
     tier: "Standard",
     balance: 54820.00,
     currency: "KES",
+    monthlySpend: 18400,
+    moneyReceived: 32000,
     payments: [
         {
             id: "mpesa",
@@ -31,37 +35,56 @@ const myUser = {
         },
     ],
 };
+// badge colours for each tier 
 const tierColors = {
     Basic: "badge--gray",
     Standard: "badge--blue",
     Premium: "badge--gold",
 };
+// format the balance with commas 
 function showBalance(amount, currency) {
     const formatted = amount.toLocaleString("en-KE", { minimumFractionDigits: 2 });
     return `${currency} ${formatted}`;
 }
+// fill the page with data 
 function fillPage(user) {
+    // avatar initials
     const avatarEl = document.querySelector(".avatar-circle span");
     if (avatarEl) {
         avatarEl.textContent = user.initials;
     }
+    // name
     const nameEl = document.querySelector(".user-name");
     if (nameEl) {
         nameEl.textContent = user.fullName;
     }
+    // phone
     const phoneEl = document.querySelector(".user-phone");
     if (phoneEl) {
         phoneEl.textContent = user.phone;
     }
+    // tier badge
     const badgeEl = document.querySelector(".tier-badge");
     if (badgeEl) {
         badgeEl.textContent = user.tier;
         badgeEl.className = "tier-badge " + tierColors[user.tier];
     }
+    // balance
     const balanceEl = document.querySelector(".balance-number");
     if (balanceEl) {
         balanceEl.textContent = showBalance(user.balance, user.currency);
     }
+    // monthly spend
+    const spendEl = document.querySelector(".stat-box:nth-child(2) .stat-value");
+    if (spendEl) {
+        spendEl.textContent = showBalance(user.monthlySpend, user.currency);
+    }
+    // money received
+    const receivedEl = document.querySelector(".stat-box:nth-child(3) .stat-value");
+    if (receivedEl) {
+        receivedEl.textContent = showBalance(user.moneyReceived, user.currency);
+    }
+    // payment methods list
     const listEl = document.querySelector(".payments-list");
     if (!listEl)
         return;
